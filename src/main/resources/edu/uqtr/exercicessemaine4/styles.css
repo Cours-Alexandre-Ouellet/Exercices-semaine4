@@ -1,0 +1,66 @@
+/*
+ * Fenetre principale aura ces caractéristiques
+ * La propriété font-family ne sera pas héritée par tous les enfants
+ */
+#fenetre {
+    -fx-background-color: #333333;
+    -fx-font-family: "Trebuchet MS";
+}
+
+/* Tous les éléments titre auront cette styleClass */
+.titre {
+    -fx-font-size: 32pt;
+    /* On utilise fill ici, car Text n'est pas un enfant, mais partie intégrante de l'objet */
+    -fx-fill: #9999cc;
+}
+
+/*
+ * S'applique à tous les objet Label
+ */
+Label {
+    -fx-font-size: 12pt;
+    -fx-text-alignment: left;
+    -fx-pref-width: 300px;
+    -fx-underline: true;
+    /* Text-fill est utilisé ici, car un composant texte est implicitement enfant du Label */
+    -fx-text-fill: #9999cc;
+}
+
+/*
+ * S'applique à tous les objets TextField et PasswordField
+ */
+TextField, PasswordField {
+    -fx-background-color: #666666;
+    -fx-text-fill: #aaaacc;
+    -fx-font-size: 12pt;
+    -fx-font-family: "Trebuchet MS";
+}
+
+/*
+ * S'applique à tous les boutons
+ */
+Button {
+    -fx-font-weight: bold;
+    -fx-font-size: 12pt;
+    -fx-font-family: "Trebuchet MS";
+}
+
+/*
+ * S'applique au bouton avec l'id Connexion
+ */
+#connexion {
+    -fx-background-color: #669966;
+}
+/*
+ * S'applique au bouton avec l'id Connexion lorsqu'il est survolé par la souris
+ */
+#connexion:hover {
+    -fx-background-color: #66bb66;
+}
+
+#reinitialisation {
+    -fx-background-color: #996666;
+}
+#reinitialisation:hover {
+    -fx-background-color: #bb6666;
+}
